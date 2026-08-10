@@ -4,8 +4,10 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import Widget from "./widget";
+import type { DayNightMode } from "./widget";
 
-const MEDIA = {
+const MEDIA: Record<DayNightMode, { poster: string; video: string }> = {
   day: {
     poster: "/mainAssets/hero-day-poster.webp",
     video: "/mainAssets/hero-background-video.mp4",
@@ -17,9 +19,11 @@ const MEDIA = {
 } as const;
 
 export default function Hero() {
-  const { poster: posterSrc, video: videoSrc } = MEDIA.day;
+  const [mode, setMode] = useState<DayNightMode>("day");
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  const { poster: posterSrc, video: videoSrc } = MEDIA[mode]
 
   useEffect(() => {
     const video = videoRef.current;
@@ -127,6 +131,10 @@ export default function Hero() {
                 </Button>
               </div>
             </div>
+          </div>
+          {/* for widget toggle for day and night changes */}
+          <div className="absolute top-1/4 right-7 z-20 -translate-1/2 sm:right-10 lg:right-16">
+            <Widget value={mode} onChange={setMode} />
           </div>
         </div>
       </div>
