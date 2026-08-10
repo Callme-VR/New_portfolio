@@ -82,9 +82,12 @@ export default function Hero() {
       {/* Gradient overlay */}
       <div className="absolute inset-0 z-10 bg-[linear-gradient(108deg,rgba(15,15,17,0.78)_0%,rgba(15,15,17,0.58)_27%,rgba(15,15,17,0.37)_46%,rgba(15,15,17,0.37)_68%,rgba(15,15,17,0.37)_84%)]" />
 
+      <div className="absolute inset-x-0 h-33 z-10 bg-[linear-gradient(to_bottom,rgba(15,15,17,0.55)_0%,rgba(15,15,17,0.18)_55%),rgba(15,15,17,0)_100%)]]" />
+
+
       {/* Foreground Content */}
       <div className="relative z-20 flex min-h-screen flex-col justify-between">
-        <div className="h-16 shrink-0 sm:h-5" />
+
 
         <div className="flex flex-1 items-center">
           <div className="mx-auto w-full max-w-[1460px] px-6 md:px-10 lg:px-20">
