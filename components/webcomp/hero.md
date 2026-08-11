@@ -25,12 +25,13 @@ To resolve network, contrast, and layout constraints, the Hero component is buil
 │ - Scroll Indicator: ArrowDown icon with tracking-out "SCROLL" prompt        │
 │ - Telemetry Bar: Live City (MapPin) · Temperature (Thermometer) · Time (Clock3)│
 ├─────────────────────────────────────────────────────────────────────────────┤
-│ LAYER 2: Foreground Content Layer & Theme Toggle (z-20 / z-30)              │
+│ LAYER 2: Foreground Content Layer, Theme Toggle & Token Widget (z-10 / z-20 / z-30)│
 │ - Tagline: UPPERCASE, tracked-out kicker ("FULL-STACK · AI ENGINEER")       │
 │ - Headline (H1): 3-line rhythmic structure                                  │
 │ - Value Prop (<p>): Single-sentence core positioning                        │
 │ - CTAs: Primary (#FF4D00) with hover translate + Secondary Glassmorphic     │
 │ - Day/Night Widget: Positioned right canvas margin with spring motion      │
+│ - Token Usage Widget: Positioned bottom-right canvas margin (z-10)          │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │ LAYER 1: Optical Contrast Gradient Overlays (z-10)                           │
 │ - 108deg directional linear gradient (rgba(15,15,17,0.78) to 0.37)          │
@@ -164,6 +165,8 @@ The `<Button>` component wraps Base UI primitives (`@base-ui/react/button`). Whe
 
 - **Hero Component**: [`Hero.tsx`](file:///d:/update_portfolio/components/webcomp/Hero.tsx)
 - **Day/Night Widget**: [`widget.tsx`](file:///d:/update_portfolio/components/webcomp/widget.tsx)
+- **Token Usage Widget**: [`Token-widget.tsx`](file:///d:/update_portfolio/components/webcomp/Token-widget.tsx)
 - **Location & Weather Utility**: [`location.ts`](file:///d:/update_portfolio/lib/StaticContent/location.ts)
 - **Button System Component**: [`button.tsx`](file:///d:/update_portfolio/components/ui/button.tsx)
 - **Hero Documentation**: [`hero.md`](file:///d:/update_portfolio/components/webcomp/hero.md)
+- **Token Widget Documentation**: [`token-widget.md`](file:///d:/update_portfolio/components/webcomp/token-widget.md)

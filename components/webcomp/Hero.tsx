@@ -23,6 +23,7 @@ import {
   getUserGeoLocation,
   type GeoLocation,
 } from "@/lib/StaticContent/location";
+import TokenUsage from "./Token-widget";
 
 /* -------------------------------------------------------------------------- */
 /*                              HERO MEDIA                                    */
@@ -342,6 +343,13 @@ export default function Hero() {
           <div className="absolute right-5 top-1/3 z-30 -translate-y-1/2 transition-transform duration-500 ease-out sm:right-10 lg:right-16">
             <Widget value={mode} onChange={setMode} />
           </div>
+
+
+          {/* token widget */}
+          <div className="absolute right-6 lg:right-12 bottom-24 z-10 flex justify-end items-end">
+            <TokenUsage />
+          </div>
+
         </div>
 
         {/* ---------------------------------------------------------------- */}
@@ -373,7 +381,7 @@ export default function Hero() {
               <div className="flex items-center gap-3">
                 <ArrowDown
                   aria-hidden="true"
-                  className="size-4 text-overlay-cream/60"
+                  className="size-4 text-overlay-cream/60 animate-bounce"
                 />
 
                 <span className="uppercase tracking-[0.15em]">

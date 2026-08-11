@@ -26,6 +26,7 @@ A modern, high-performance portfolio built with **Next.js 16 (App Router)**, **R
 - **Real-Time Telemetry & Geolocation**: Integrates client IP geolocation (`ipapi.co`), live ambient weather (`Open-Meteo API`), and a live 1-second interval clock (`Intl.DateTimeFormat`) localized to the visitor's detected timezone.
 - **Hero Bottom Bar**: Features an "Available for work" live availability badge with glowing green pulse (`animate-ping`), scroll indicator prompt, and live location/weather telemetry bar (`MapPin`, `Thermometer`, `Clock3`).
 - **Interactive Day/Night Mode Switching**: Integrated with `Widget.tsx` to dynamically switch between day and night video streams (`hero-background-video.mp4` / `hero-night-video.mp4`) and poster assets.
+- **Token Widget Canvas Overlay**: Positioned overlay displaying AI inference token telemetry (`Token-widget.tsx`).
 - **Optical Contrast Overlays**: Features dual directional gradients ensuring 100% WCAG AAA text legibility regardless of background video brightness.
 - **Base UI & Micro-interactions**: Uses Base UI buttons with clean `nativeButton={false}` resolution, springy hover translates (`-translate-y-0.5`), and arrow icon translations.
 - 📄 **Detailed Documentation**: [`components/webcomp/hero.md`](file:///d:/update_portfolio/components/webcomp/hero.md)
@@ -36,6 +37,12 @@ A modern, high-performance portfolio built with **Next.js 16 (App Router)**, **R
 - **Glassmorphic Styling & Icons**: Custom border styling (`border-overlay-cream/20`), backdrop blur filter (`backdrop-blur-md`), and dynamic icon fills (`fill={isDay ? "currentColor" : "none"}`).
 - **Accessible Switch Design**: Native button markup with explicit `role="switch"` semantics, dynamic `aria-label` announcements, and visible keyboard focus rings (`focus-visible:ring-2`).
 - 📄 **Detailed Documentation**: [`components/webcomp/widget.md`](file:///d:/update_portfolio/components/webcomp/widget.md)
+
+### 4. Token Usage Widget ([`Token-widget.tsx`](file:///d:/update_portfolio/components/webcomp/Token-widget.tsx))
+- **Glassmorphic Metadata Card**: Semantic `<aside>` element featuring translucent overlay backdrop blur (`backdrop-blur-[10px]`), contrast borders (`border-overlay-cream/20`), and subtle shadows (`shadow-sm`).
+- **Interactive Token Pill**: Integrated with Base UI Ghost Button (`rounded-full`, `px-3 py-2`) featuring hover highlight state (`hover:bg-overlay-cream/10`).
+- **Telemetry Typography & Iconography**: Lucide `Gauge` icon (`strokeWidth={1.8}`) paired with tracked uppercase typography (`tracking-[0.15em]`) and time window indicator (`· 14 days`).
+- 📄 **Detailed Documentation**: [`components/webcomp/token-widget.md`](file:///d:/update_portfolio/components/webcomp/token-widget.md)
 
 ---
 
@@ -54,6 +61,8 @@ A modern, high-performance portfolio built with **Next.js 16 (App Router)**, **R
 │       ├── header.md         # Header design system & alignment documentation
 │       ├── Hero.tsx          # Interactive Hero section component with telemetry
 │       ├── hero.md           # First-principles Hero component documentation
+│       ├── Token-widget.tsx  # Glassmorphic Token Usage telemetry widget
+│       ├── token-widget.md   # Token Usage widget architecture documentation
 │       ├── widget.tsx        # Framer Motion Day/Night theme toggle widget
 │       └── widget.md         # Widget architecture & interactive system documentation
 ├── lib/
